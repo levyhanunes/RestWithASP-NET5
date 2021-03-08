@@ -1,13 +1,11 @@
 ﻿using RestWithASPNET.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 
-namespace RestWithASPNET.service.Implementations
+namespace RestWithASPNET.Controllers
 {
-    public class PersonServiceImplementation : IPersonService
+    internal class IpersonService
     {
         private volatile int count;
 
@@ -31,7 +29,7 @@ namespace RestWithASPNET.service.Implementations
             return persons;
         }
 
-        
+
 
         public Person FindByID(long id)
         {
@@ -44,6 +42,8 @@ namespace RestWithASPNET.service.Implementations
                 Gender = "M",
             };
         }
+
+        
 
         public Person Update(Person person)
         {
